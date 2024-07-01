@@ -1,5 +1,6 @@
 from flask import request
 from app.libs.redprint import Redprint
+from app.models.user import User
 
 api = Redprint('client')
 
@@ -17,4 +18,4 @@ def create_client():
     pass
 
 def __register_user_by_email():
-    pass
+    User.register_by_email()
